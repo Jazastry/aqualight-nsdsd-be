@@ -3,18 +3,18 @@ console.dir ( ip.address() );
 // import the module
 const mdns = require('mdns');
 
-var txt_record = {
-  ip: ip.address().toString()
-};
-const ad = mdns.createAdvertisement(mdns.tcp('http'), 1337, {
-  name: 'aqualight',
-  networkInterface: ip.address(),
-  txtRecord: txt_record
-}, (err, data) => {
-  if (err) consle.error(err)
-  // console.log('data', data)
-});
-ad.start();
+// var txt_record = {
+//   ip: ip.address().toString()
+// };
+// const ad = mdns.createAdvertisement(mdns.tcp('http'), 1337, {
+//   name: 'aqualight',
+//   networkInterface: ip.address(),
+//   txtRecord: txt_record
+// }, (err, data) => {
+//   if (err) consle.error(err)
+//   // console.log('data', data)
+// });
+// ad.start();
 
 var bonjour = require('bonjour')()
 
